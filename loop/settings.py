@@ -19,8 +19,8 @@ INSTALLED_APPS = [
 ]
 
 
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+CELERY_BROKER_URL = 'redis://default:redispw@localhost:49153'
+CELERY_RESULT_BACKEND = 'redis://default:redispw@localhost:49153'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
@@ -37,7 +37,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'loop_assignment.urls'
+ROOT_URLCONF = 'loop.urls'
 
 TEMPLATES = [
     {
@@ -55,7 +55,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'loop_assignment.wsgi.application'
+WSGI_APPLICATION = 'loop.wsgi.application'
 
 DATABASES = {
     'default': {

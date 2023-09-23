@@ -4,7 +4,7 @@ from rest_framework import status
 from celery.result import AsyncResult
 from .uptime_calculator import generate_report
 from .serializers import ReportSerializer
-from loop.loop_assignment.celery import app
+from loop.celery_app import app
 
 
 @app.task(bind=True)
